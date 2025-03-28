@@ -15,14 +15,6 @@ const profile = {
     max_age_interest: ''
   };
 
-let firstName = '';
-let lastName = '';
-let age = '';
-let gender = '';
-let genderInterest = '';
-let location = '';
-let minAgeInterest = '';
-let maxAgeInterest = '';
 
 // const questions
 
@@ -36,115 +28,6 @@ const questions = [
     "What is the minimum age you are interested in?",
     "What is the maximum age you are interested in?"
   ];
-//   let i = 0;
-//   const answers = [];
-//     for (const question of questions){
-//         const answer = prompt(question);
-//         answers.push(answer);
-       
-//       while(i === 0 )
-//       {
-//        firstName = answers[0];    
-//         while(firstName === '')
-//         {
-//            console.log("Please enter your first name.");
-//            firstName = prompt("Enter your first name : ");
-//         }
-//         profile.first_name = firstName;
-//         i++;
-//       }
-       
-//       while(i === 1 )
-//       {   
-//         lastName = answers[1];       
-//         while(lastName === '' ){
-//           console.log("Please enter your last name");
-//           lastName = prompt("Enter your last name : ");
-//         }
-//         profile.last_name = lastName;
-//         i++;
-//       }
-      
-      
-//         age = answers[2];       
-//         while(age !== undefined)
-//         {
-//         while (isNaN(age) || Number(age) < 18 || age === '') {
-//           console.log("Please enter a valid age (a number higher than 18).");
-//           // Prompt the user for input again
-//            age = prompt("Enter your age: "); 
-//           }
-//         }
-//       profile.age = age;
-      
-      
-//       gender = answers[3];     
-//       while(gender !==undefined)
-//       {
-//         while(gender === '' || gender !== 'F' && gender !== 'M' && gender !== 'X')
-//         {
-//           console.log("Please enter your gender (F, M, X).")
-//           gender = prompt("Enter your gender(F,M,X): "); 
-//         }
-//       }
-//         profile.gender = gender;
-      
-             
-//         genderInterest = answers[4];    
-//       while(genderInterest !== undefined)
-//       {
-//         while(genderInterest === '' || genderInterest !== 'F' && genderInterest !== 'M' && genderInterest !== 'X')
-//         {
-//           console.log("Please enter the gender you are interested in (F, M, X).");
-//           genderInterest = prompt("Enter your the gender you are interested in(F,M,X): "); 
-//         }
-//       }
-//         profile.gender_interest = genderInterest;
-      
-              
-//         location = answers[5];  
-//          while(location !== undefined)
-//       {
-//         while(location === '' || location !== 'rural' && location !== 'city')
-//         {
-//           console.log("Plese enter your location (rural or city).");
-//           location = prompt("Enter your location(city or rural): ");
-//         }
-//       }
-//         profile.location = location;
-          
-         
-//         minAgeInterest = answers[6];    
-        
-//        while(minAgeInterest !== undefined) 
-//         {  
-//         while(minAgeInterest === '' || Number(minAgeInterest) < 18 || isNaN(minAgeInterest))
-//         {
-//           console.log("Please enter the minimum age you are interested in or a number higher than 18.");
-//           minAgeInterest = prompt("Enter the minimum age you are interested in: ");
-//         }
-//       }
-//         profile.min_age_interest = minAgeInterest;
-
-        
-       
-//         maxAgeInterest = answers[7];    
-        
-//       while(maxAgeInterest !== undefined)
-//       {
-//         while(maxAgeInterest === '' || Number(maxAgeInterest) < 18 || Number(maxAgeInterest) < Number || isNaN(maxAgeInterest))
-//         {
-//           console.log("Please enter the maximum age you are interested in or a number higher than 18.");
-//           maxAgeInterest = prompt("Enter the maximum age you are interested in : ");
-//         }
-//       }
-//         profile.max_age_interest = maxAgeInterest;
-//     }
-    
-    
-//           //console.table(answers);
-          
-//         console.table(profile);
 
 
 // First name
@@ -214,7 +97,7 @@ while (isNaN(profile.max_age_interest) || Number(profile.max_age_interest) < 18 
 // Display the profile
 console.table(profile);
 
-        
+ //match with mockdata       
         let matches = [];
         for(let person of mockData)
         {
