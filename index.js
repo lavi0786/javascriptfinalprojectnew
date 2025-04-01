@@ -7,12 +7,12 @@ const prompt = require('prompt-sync')();
 const profile = {
     first_name: '',
     last_name: '',
-    age: '',
+    age:0,
     gender: '',
     gender_interest: '',
     location: '',
-    min_age_interest: '',
-    max_age_interest: ''
+    min_age_interest: 0,
+    max_age_interest: 0
   };
 
 
@@ -92,6 +92,12 @@ while (isNaN(profile.max_age_interest) || Number(profile.max_age_interest) < 18 
   if (isNaN(profile.max_age_interest) || Number(profile.max_age_interest) < 18 || profile.max_age_interest === '') {
       console.log("Please enter a valid maximum age.");
   }
+}
+
+// Ensure max_age_interest is greater than or equal to min_age_interest
+while (Number(profile.max_age_interest) < Number(profile.min_age_interest)) {
+  console.log("Maximum age interest cannot be less than minimum age interest.");
+  profile.max_age_interest = prompt(questions[7]);
 }
 
 // Display the profile
